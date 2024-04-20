@@ -210,42 +210,6 @@ function process_searchCpu() {
 }
 
 # Description:
-#   This is a search wrapper function
-function process_searchWrapper() {
-    options=("Search by command name" "Search by user"
-    "filter by minimum cpu amount" "filter by minimum memory amount")
-
-    select _ in "${options[@]}"; do
-        case $REPLY in
-            1) echo "Please enter a command name:"
-                    read -r command_name
-                        process_searchName "$command_name"
-                        break
-            ;;
-            2) 
-                echo "Please enter a user name:"
-                    read -r user_name
-                        process_searchUser "$user_name"
-                        break
-            ;;
-            3) 
-                echo "Please enter a cpu percentage:"
-                    read -r cpu_percentage
-                        process_searchCpu "$cpu_percentage"
-                    break
-            ;;
-            
-            4)  
-                echo "Please enter a memory percentage:"
-                    read -r memory_percentage
-                        process_searchMemory "$memory_percentage"
-                    break
-            ;;
-            *) echo "Invalid option";;
-        esac
-    done
-}
-# Description:
 #   This function detects dangerous processes on the cpu
 #   It takes a cpu% as an argument, and returns all process >= this value
 
