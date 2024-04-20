@@ -6,6 +6,8 @@ else
     exit 1
 fi
 
+# Description:
+#   This function represents the main menu interface for the program
 INTERFACE_main_menu() {
     local options=("Create New (overwrite existing) log file"
                   "Update Log File (without overwriting)"
@@ -44,6 +46,8 @@ INTERFACE_main_menu() {
     done
 }
 
+# Description:
+#   This function represents the filter menu interface for the program
 INTERFACE_filter_menu() {
     local options=("ERROR" "WARNING" "INFO" "DEBUG" "Back")
 

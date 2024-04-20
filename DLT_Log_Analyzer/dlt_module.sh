@@ -74,9 +74,9 @@ DLT_filter_level() {
 #   This function returns the total number of logs in the log file
 DLT_count_all() {
     if [ ! -f "$OUTPUT_FILE" ]; then
-        echo 0;
+        printf "'%s' log file doesn't exist \n" "$OUTPUT_FILE";
         return
-    fi
+    fi 
     local line_count;
     line_count="$(wc -l < "$OUTPUT_FILE")";
     echo "$line_count";
@@ -86,9 +86,9 @@ DLT_count_all() {
 #   This function returns the number of logs of a specified type (level)
 DLT_count_log_level() {
     if [ ! -f "$OUTPUT_FILE" ]; then
-        echo 0;
-        return;
-    fi
+        printf "'%s' log file doesn't exist \n" "$OUTPUT_FILE";
+        return
+    fi 
     local severity_level="$1"
     local -i count=0
     while IFS= read -r line; do
@@ -101,6 +101,10 @@ DLT_count_log_level() {
 # Description:
 #   This function prints the error log summary (the number of error log messages and its percentage)
 DLT_error_summary() {
+    if [ ! -f "$OUTPUT_FILE" ]; then
+        printf "'%s' log file doesn't exist \n" "$OUTPUT_FILE";
+        return
+    fi 
     local all_count;
     local error_count;
     local percentage;
@@ -114,6 +118,10 @@ DLT_error_summary() {
 # Description:
 #   This function prints the warning log summary (the number of warning log messages and its percentage)
 DLT_warning_summary() {
+    if [ ! -f "$OUTPUT_FILE" ]; then
+        printf "'%s' log file doesn't exist \n" "$OUTPUT_FILE";
+        return
+    fi 
     local all_count;
     local warning_count;
     local percentage;

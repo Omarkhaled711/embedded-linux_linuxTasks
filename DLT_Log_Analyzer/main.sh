@@ -7,4 +7,10 @@ else
     exit 1;
 fi
 
-INTERFACE_main_menu;
+# Description:
+# Entry point for the program
+main () {
+    INTERFACE_main_menu;
+}
+
+main;
