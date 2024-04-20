@@ -53,3 +53,35 @@ Users can create a configuration file (e.g., process_monitor.conf) with settings
     MEMORY_ALERT_THRESHOLD=80
 
     ```
+
+## Screenshots
+
+1. **Interface Menu**
+   ![Interface Menu](./images/interface_menu.png)
+
+2. **Real-time Monitoring All Processes**
+   ![Monitoring](./images/monitor.png)
+
+3. **Process Information**
+   - **Creating a New Process**
+     ![Creating a New Process](./images/create_process.png)
+   - **Get Process Information by PID**
+     ![Get Process Information](./images/get_process_info.png)
+
+4. **Kill a Process**
+   - **Kill the Process**
+     ![Kill Process](./images/kill_process.png)
+   - **Confirmation of Process Termination**
+     ![Process Killed](./images/process_killed.png)
+
+5. **Print Process Statistics**
+   ![Process Statistics](./images/process_statistics.png)
+
+6. **Search and Filter Menu**
+   ![Search and Filter Menu](./images/search_filter_menu.png)
+
+7. **Example on Search (Search by Command Name)**
+   ![Search Example](./images/search_example.png)
+
+8. **Example on Filtering (Filter by Memory Usage)**
+   ![Filter Example](./images/filter_example.png)
