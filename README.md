@@ -10,4 +10,8 @@ Project Idea: File Organizer
 
 ### Task B
 
-Bash Project Idea: Process Monitor (from scratch using the /proc filesystem)
+Project Idea: Process Monitor (from scratch using the /proc filesystem)
+
+### Task C
+
+Project Idea: DLT Log Analyzer
